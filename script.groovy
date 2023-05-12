@@ -8,6 +8,6 @@ def bestApp() {
 
 def deployApp() {
     echo "Deploying the application"
-    echo "Deploying version ${params.VERSION}"
+    echo "Deploying version ${VERSION} "
 }
 return this
