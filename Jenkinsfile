@@ -1,4 +1,4 @@
-def groo_sc
+def gv
 
 pipeline {
     agent any
@@ -7,17 +7,18 @@ pipeline {
         booleanParam(name: 'executeTests', defaultValue: true, description: 'for you choice')
     }
     stages {
+        
         stage("Loading Script..."){
             steps{
                 script{
-                    groo_sc = load "script.groovy"
+                    gv = load "script.groovy"
                 }
             }
         }
         stage("Build") {
             steps {
                 script{
-                    groo_sc.buildApp()
+                    gv.buildApp()
                 }
             }
         }
@@ -30,7 +31,7 @@ pipeline {
             }
             steps {
                 script{
-                    groo_sc.testApp()
+                    gv.testApp()
                 }
             }
         }
@@ -39,7 +40,7 @@ pipeline {
         stage("deploy") {
             steps {
                 script{
-                    groo_sc.deployApp()
+                    gv.deployApp()
                 }
             }
 
