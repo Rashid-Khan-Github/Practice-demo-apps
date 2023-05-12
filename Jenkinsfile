@@ -9,8 +9,13 @@ pipeline {
 
     stages {
         
+<<<<<<< HEAD
         stage("init") {
             steps{
+=======
+        stage("init"){
+            steps {
+>>>>>>> 7d18756ab713be97616e5f36d61caa204f2c66f2
                 script {
                     gv = load "script.groovy"
                 }
