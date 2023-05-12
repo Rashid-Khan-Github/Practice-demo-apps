@@ -37,9 +37,6 @@ pipeline {
 
         
         stage("deploy") {
-            input {
-
-            }
             steps {
                 script{
                     groo_sc.deployApp()
